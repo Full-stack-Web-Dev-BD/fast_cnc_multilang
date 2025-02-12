@@ -1,0 +1,1375 @@
+<!doctype html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <title>CNC Services &#8211; fast cnc cutting, milling and turning</title>
+    <meta name='robots' content='max-image-preview:large' />
+    <style>
+        img:is([sizes="auto" i], [sizes^="auto," i]) {
+            contain-intrinsic-size: 3000px 1500px
+        }
+    </style>
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link href='https://fonts.gstatic.com' crossorigin='1' rel='preconnect' />
+    <link rel="alternate" type="application/rss+xml"
+        title="fast cnc cutting, milling and turning &raquo; Kanał z wpisami" href="https://fastcnc.eu/feed/" />
+    <link rel="alternate" type="application/rss+xml"
+        title="fast cnc cutting, milling and turning &raquo; Kanał z komentarzami"
+        href="https://fastcnc.eu/comments/feed/" />
+    <script>
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/fastcnc.eu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1" } };
+        /*! This file is auto-generated */
+        !function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
+    </script>
+    <link rel='stylesheet' id='wp-block-library-css'
+        href='https://fastcnc.eu/wp-includes/css/dist/block-library/style.min.css?ver=6.7.1' media='all' />
+    <link rel='stylesheet' id='coblocks-frontend-css'
+        href='https://fastcnc.eu/wp-content/plugins/coblocks/dist/style-coblocks-1.css?ver=3.1.13' media='all' />
+    <link rel='stylesheet' id='coblocks-extensions-css'
+        href='https://fastcnc.eu/wp-content/plugins/coblocks/dist/style-coblocks-extensions.css?ver=3.1.13'
+        media='all' />
+    <style id='classic-theme-styles-inline-css'>
+        /*! This file is auto-generated */
+        .wp-block-button__link {
+            color: #fff;
+            background-color: #32373c;
+            border-radius: 9999px;
+            box-shadow: none;
+            text-decoration: none;
+            padding: calc(.667em + 2px) calc(1.333em + 2px);
+            font-size: 1.125em
+        }
+
+        .wp-block-file__button {
+            background: #32373c;
+            color: #fff;
+            text-decoration: none
+        }
+    </style>
+    <style id='global-styles-inline-css'>
+        :root {
+            --wp--preset--aspect-ratio--square: 1;
+            --wp--preset--aspect-ratio--4-3: 4/3;
+            --wp--preset--aspect-ratio--3-4: 3/4;
+            --wp--preset--aspect-ratio--3-2: 3/2;
+            --wp--preset--aspect-ratio--2-3: 2/3;
+            --wp--preset--aspect-ratio--16-9: 16/9;
+            --wp--preset--aspect-ratio--9-16: 9/16;
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--color--primary: rgb(0, 0, 0);
+            --wp--preset--color--secondary: rgb(69, 90, 100);
+            --wp--preset--color--tertiary: rgb(236, 239, 241);
+            --wp--preset--color--quaternary: #ffffff;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--gradient--primary-to-secondary: linear-gradient(135deg, rgb(0, 0, 0) 0%, rgb(69, 90, 100) 100%);
+            --wp--preset--gradient--primary-to-tertiary: linear-gradient(135deg, rgb(0, 0, 0) 0%, rgb(236, 239, 241) 100%);
+            --wp--preset--gradient--primary-to-background: linear-gradient(135deg, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 100%);
+            --wp--preset--gradient--secondary-to-tertiary: linear-gradient(135deg, rgb(69, 90, 100) 0%, rgb(255, 255, 255) 100%);
+            --wp--preset--font-size--small: 17px;
+            --wp--preset--font-size--medium: 21px;
+            --wp--preset--font-size--large: 24px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--font-size--huge: 30px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+            --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+            --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+            --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        :where(.is-layout-grid) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .is-layout-flex> :is(*, div) {
+            margin: 0;
+        }
+
+        body .is-layout-grid {
+            display: grid;
+        }
+
+        .is-layout-grid> :is(*, div) {
+            margin: 0;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-columns.is-layout-grid) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-post-template.is-layout-flex) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-post-template.is-layout-grid) {
+            gap: 1.25em;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        :where(.wp-block-post-template.is-layout-flex) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-post-template.is-layout-grid) {
+            gap: 1.25em;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        :where(.wp-block-columns.is-layout-grid) {
+            gap: 2em;
+        }
+
+        :root :where(.wp-block-pullquote) {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel='stylesheet' id='wp-components-css'
+        href='https://fastcnc.eu/wp-includes/css/dist/components/style.min.css?ver=6.7.1' media='all' />
+    <link rel='stylesheet' id='godaddy-styles-css'
+        href='https://fastcnc.eu/wp-content/plugins/coblocks/includes/Dependencies/GoDaddy/Styles/build/latest.css?ver=2.0.2'
+        media='all' />
+    <link rel='stylesheet' id='go-style-css'
+        href='https://fastcnc.eu/wp-content/themes/go/dist/css/style-shared.min.css?ver=1.8.11' media='all' />
+    <link rel='stylesheet' id='go-design-style-modern-css'
+        href='https://fastcnc.eu/wp-content/themes/go/dist/css/design-styles/style-modern.min.css?ver=1.8.11'
+        media='all' />
+    <link rel='stylesheet' id='fastcnc-go-izi-toast-css'
+        href='https://fastcnc.eu/wp-content/themes/fastcnc-go/styles/plugins/iziToast.min.css?ver=6.7.1' media='all' />
+    <link rel='stylesheet' id='fastcnc-go-css'
+        href='https://fastcnc.eu/wp-content/themes/fastcnc-go/styles/front.css?ver=1737847462' media='all' />
+    <link rel='preload' as='style'
+        href='https://fonts.googleapis.com/css?family=Heebo%3A800%2C400%7CFira+Code%3A400%2C400i%2C700%7CMontserrat%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;display=swap&#038;ver=1.8.11' />
+    <link rel='stylesheet' id='go-fonts-css'
+        href='https://fonts.googleapis.com/css?family=Heebo%3A800%2C400%7CFira+Code%3A400%2C400i%2C700%7CMontserrat%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;display=swap&#038;ver=1.8.11'
+        media="print" onload="this.media='all'" />
+
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Heebo%3A800%2C400%7CFira+Code%3A400%2C400i%2C700%7CMontserrat%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;display=swap&#038;ver=1.8.11" />
+    </noscript>
+    <script src="https://fastcnc.eu/wp-content/themes/fastcnc-go/scripts/plugins/iziToast.min.js?ver=6.7.1"
+        id="fastcnc-go-izi-toast-js"></script>
+    <script id="fastcnc-go-izi-toast-js-after">
+        iziToast.settings({
+            position: 'bottomCenter',
+            messageColor: 'rgba( 0, 0, 0, .7 )',
+            titleColor: 'rgba( 0, 0, 0, .7 )',
+            close: false,
+            timeout: 2000
+        })
+    </script>
+    <link rel="https://api.w.org/" href="https://fastcnc.eu/wp-json/" />
+    <link rel="alternate" title="JSON" type="application/json" href="https://fastcnc.eu/wp-json/wp/v2/pages/536" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://fastcnc.eu/xmlrpc.php?rsd" />
+    <meta name="generator" content="WordPress 6.7.1" />
+    <link rel="canonical" href="https://fastcnc.eu/cnc-services/" />
+    <link rel='shortlink' href='https://fastcnc.eu/?p=536' />
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
+        href="https://fastcnc.eu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffastcnc.eu%2Fcnc-services%2F" />
+    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
+        href="https://fastcnc.eu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffastcnc.eu%2Fcnc-services%2F&#038;format=xml" />
+    <style>
+        :root {
+            --go--color--white: hsl(0, 0%, 100%);
+            --go--color--primary: hsl(0, 0%, 0%);
+
+            --go--color--secondary: hsl(199, 18%, 33%);
+
+            --go--color--tertiary: hsl(204, 15%, 94%);
+
+            --go--color--background: hsl(0, 0%, 100%);
+
+
+
+
+
+
+
+            --go-logo--max-width: 100px;
+
+            --go-logo-mobile--max-width: 100px;
+
+            --go--viewport-basis: 950;
+
+
+
+
+
+        }
+
+        .has-primary-to-secondary-gradient-background {
+            background: -webkit-linear-gradient(135deg, var(--go--color--primary) 0%, var(--go--color--secondary) 100%);
+            background: -o-linear-gradient(135deg, var(--go--color--primary) 0%, var(--go--color--secondary) 100%);
+            background: linear-gradient(135deg, var(--go--color--primary) 0%, var(--go--color--secondary) 100%);
+        }
+
+        .has-primary-to-tertiary-gradient-background {
+            background: -webkit-linear-gradient(135deg, var(--go--color--primary) 0%, var(--go--color--tertiary) 100%);
+            background: -o-linear-gradient(135deg, var(--go--color--primary) 0%, var(--go--color--tertiary) 100%);
+            background: linear-gradient(135deg, var(--go--color--primary) 0%, var(--go--color--tertiary) 100%);
+        }
+
+        .has-primary-to-background-gradient-background {
+            background: -webkit-linear-gradient(135deg, var(--go--color--primary) 0%, var(--go--color--background) 100%);
+            background: -o-linear-gradient(135deg, var(--go--color--primary) 0%, var(--go--color--background) 100%);
+            background: linear-gradient(135deg, var(--go--color--primary) 0%, var(--go--color--background) 100%);
+        }
+
+        .has-secondary-to-tertiary-gradient-background {
+            background: -webkit-linear-gradient(135deg, var(--go--color--secondary) 0%, var(--go--color--tertiary) 100%);
+            background: -o-linear-gradient(135deg, var(--go--color--secondary) 0%, var(--go--color--tertiary) 100%);
+            background: linear-gradient(135deg, var(--go--color--secondary) 0%, var(--go--color--tertiary) 100%);
+        }
+    </style>
+    <style id="custom-background-css">
+        body.custom-background {
+            background-color: #ffffff;
+        }
+    </style>
+    <style id="wp-custom-css">
+        .menu-main-menu-container ul {
+            display: flex;
+        }
+
+        .__currency_selector {}
+
+        .__currency_selector select {
+            font-size: 14px;
+            border: 0;
+            border-bottom: 2px solid;
+            font-weight: 600;
+            position: relative;
+            bottom: 5px;
+            width: 210px;
+            text-align: left;
+            cursor: pointer;
+            margin: 0;
+        }
+
+        .lsr-details__cart_items,
+        .lsr-details_loading {
+            visibility: hidden
+        }
+
+        .lsr-order-item__summary_cost-per-piece {
+            visibility: hidden
+        }
+
+        .lsr-order-item__summary_total-cost {
+            visibility: hidden
+        }
+
+        .__lsr-list-summary__cost_value {
+            visibility: hidden
+        }
+    </style>
+</head>
+
+<body
+    class="page-template-default page page-id-536 custom-background wp-custom-logo wp-embed-responsive is-style-modern has-header-1 has-footer-1 has-sticky-header has-no-footer-menu has-page-titles singular">
+
+
+    <div id="page" class="site">
+
+        <a class="skip-link screen-reader-text" href="#site-content">Przejdź do treści</a>
+
+        <header id="site-header" class="site-header header relative  header-1" role="banner" itemscope
+            itemtype="http://schema.org/WPHeader">
+
+            <div class="header__inner flex items-center justify-between h-inherit w-full relative">
+
+                <div class="header__extras">
+                </div>
+
+                <div class="header__title-nav flex items-center flex-nowrap">
+
+                    <div class="header__titles lg:flex items-center" itemscope
+                        itemtype="http://schema.org/Organization">
+                        <h1 class="custom-logo"><a href="https://fastcnc.eu/" class="custom-logo-link" rel="home"><img
+                                    width="200" height="101"
+                                    src="https://fastcnc.eu/wp-content/uploads/2024/08/cropped-Fast-Cnc-scaled-e1723725217643.jpg"
+                                    class="custom-logo" alt="fast cnc cutting, milling and turning"
+                                    decoding="async" /></a></h1>
+                    </div>
+                    <nav id="header__navigation" class="header__navigation" aria-label="Poziomo" role="navigation"
+                        itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+                        <div class="header__navigation-inner">
+                            <div class="menu-main-menu-container">
+
+
+
+                                <ul id="menu-main-menu" class="primary-menu list-reset">
+                                    <select style="padding: 0px 10px !important;margin-left: 40px;"
+                                        class="__currency_selector menu-item" id="language-select">
+                                        <option value="en">English</option>
+                                        <option value="fr">Français</option>
+                                        <option value="de">Deutsch</option>
+                                        <option value="pl">Polski</option>
+                                        <option value="es">Español</option>
+                                        <option value="cs">Čeština</option>
+                                        <option value="bn">বাংলা</option>
+                                    </select>
+                                    <li id="menu-item-484"
+                                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-484"><a
+                                            href="/">Instant Quote</a></li>
+                                    <li id="menu-item-538"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-536 current_page_item menu-item-has-children menu-item-538">
+                                        <a href="https://fastcnc.eu/cnc-services/" aria-current="page">CNC Services<svg
+                                                role="img" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5"
+                                                    fill="none" fill-rule="evenodd" stroke-linecap="square" />
+                                            </svg>
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <li id="menu-item-376"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-376">
+                                                <a href="https://fastcnc.eu/laser-cutting/">Laser cutting</a>
+                                            </li>
+                                            <li id="menu-item-382"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382">
+                                                <a href="https://fastcnc.eu/cnc-routing/">CNC routing</a>
+                                            </li>
+                                            <li id="menu-item-387"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387">
+                                                <a href="https://fastcnc.eu/cnc-milling/">CNC Milling</a>
+                                            </li>
+                                            <li id="menu-item-391"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-391">
+                                                <a href="https://fastcnc.eu/cnc-turning/">CNC turning</a>
+                                            </li>
+                                            <li id="menu-item-575"
+                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-575">
+                                                <a href="https://fastcnc.eu/laser-welding/">Laser welding</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="menu-item-577"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-577">
+                                        <a href="https://fastcnc.eu/cnc-portfolio/">Portfolio</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </nav>
+
+
+                </div>
+
+
+                <div class="header__nav-toggle">
+                    <button id="nav-toggle" class="nav-toggle" type="button" aria-controls="header__navigation">
+                        <div class="nav-toggle-icon">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m3.23076923 15.4615385c-1.78430492 0-3.23076923-1.4464647-3.23076923-3.2307693 0-1.7843045 1.44646431-3.2307692 3.23076923-3.2307692s3.23076923 1.4464647 3.23076923 3.2307692c0 1.7843046-1.44646431 3.2307693-3.23076923 3.2307693zm8.76923077 0c-1.7843049 0-3.23076923-1.4464647-3.23076923-3.2307693 0-1.7843045 1.44646433-3.2307692 3.23076923-3.2307692s3.2307692 1.4464647 3.2307692 3.2307692c0 1.7843046-1.4464643 3.2307693-3.2307692 3.2307693zm8.7692308 0c-1.784305 0-3.2307693-1.4464647-3.2307693-3.2307693 0-1.7843045 1.4464643-3.2307692 3.2307693-3.2307692 1.7843049 0 3.2307692 1.4464647 3.2307692 3.2307692 0 1.7843046-1.4464643 3.2307693-3.2307692 3.2307693z" />
+                            </svg>
+                        </div>
+                        <div class="nav-toggle-icon nav-toggle-icon--close">
+                            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m21.2325621 4.63841899c.526819-.52681908.5246494-1.38313114-.0035241-1.9113046l.0438476.04384757c-.5287653-.52876531-1.3869798-.52784878-1.9113046-.00352402l-7.065629 7.06562899c-.1634497.16344977-.4265682.16533585-.591904 0l-7.06562901-7.06562899c-.52681908-.52681907-1.38313114-.52464944-1.9113046.00352402l.04384757-.04384757c-.52876531.52876532-.52784878 1.38697983-.00352402 1.9113046l7.06562899 7.06562901c.16344977.1634497.16533585.4265682 0 .591904l-7.06562899 7.065629c-.52681907.5268191-.52464944 1.3831311.00352402 1.9113046l-.04384757-.0438476c.52876532.5287654 1.38697983.5278488 1.9113046.0035241l7.06562901-7.065629c.1634497-.1634498.4265682-.1653359.591904 0l7.065629 7.065629c.5268191.526819 1.3831311.5246494 1.9113046-.0035241l-.0438476.0438476c.5287654-.5287653.5278488-1.3869798.0035241-1.9113046l-7.065629-7.065629c-.1634498-.1634497-.1653359-.4265682 0-.591904z"
+                                    fill-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <span class="screen-reader-text">Menu</span>
+                    </button>
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+        <main id="site-content" class="site-content" role="main">
+
+
+            <script>
+                window.addEventListener("load", function () {
+                    let headerContainer = document.getElementById("menu-main-menu");
+                    if (headerContainer) {
+                        let currencyDiv = document.createElement("div");
+                        currencyDiv.className = "__currency_selector menu-item";
+                        currencyDiv.innerHTML = `
+                <select style="padding: 0px 10px !important;" id="__currency">
+                    <option value="EUR">EUR (Euro)</option>
+                    <option value="PLN">PLN (Polish Zloty)</option>
+                    <option value="CZK">CZK (Czech Koruna)</option>
+                    <option value="HUF">HUF (Hungarian Forint)</option>
+                    <option value="SEK">SEK (Swedish Krona)</option>
+                    <option value="DKK">DKK (Danish Krone)</option>
+                </select>
+            `;
+                        headerContainer.prepend(currencyDiv);
+                    }
+
+                    let currencySelector = document.getElementById("__currency");
+
+                    // Ensure localStorage is set and applies the correct currency
+                    let savedCurrency = localStorage.getItem("selectedCurrency")
+                    if (!savedCurrency) {
+                        savedCurrency = "EUR";
+                        localStorage.setItem("selectedCurrency", savedCurrency);
+                    }
+                    currencySelector.value = savedCurrency;
+
+                    currencySelector.addEventListener("change", function () {
+                        localStorage.setItem("selectedCurrency", this.value);
+                    });
+                });
+            </script>
+
+            <!-- script for lang detect and manage  -->
+
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    // Function to get the current language
+                    function getCurrentLanguage() {
+                        let lang = new URLSearchParams(window.location.search).get("lang");
+                        if (!lang) {
+                            let pathLang = window.location.pathname.split('/')[1];
+                            lang = pathLang.length === 2 ? pathLang : "default"; // Adjust based on WPML setup
+                        }
+                        return lang;
+                    }
+
+                    // Store the language in localStorage
+                    let currentLang = getCurrentLanguage();
+                    localStorage.setItem("wpml_lang", currentLang);
+
+                    // Debug: Check stored language
+                    console.log("Language saved:", localStorage.getItem("wpml_lang"));
+                });
+
+            </script>
+
+
+            <article class="post-536 page type-page status-publish hentry" id="post-536">
+
+                <header class="page-header entry-header m-auto px ">
+                    <h1 class="post__title m-0 text-center">CNC Services</h1>
+                </header>
+                <div class="content-area__wrapper">
+                    <div class="content-area entry-content">
+
+                        <h3 class="wp-block-heading">Professional Milling, Turning, and Laser Cutting Services</h3>
+
+
+
+                        <p>Welcome to our website! We are a leading provider of <strong>milling, turning, and laser
+                                cutting services</strong>, offering comprehensive solutions for machining metals,
+                            plastics, and other materials. With our advanced machinery and a team of experienced
+                            specialists, we guarantee the highest quality, precision, and efficiency for every project.
+                        </p>
+
+
+
+                        <h4 class="wp-block-heading">Our Services</h4>
+
+
+
+                        <ol class="wp-block-list">
+                            <li><strong>Milling</strong> &#8211; We offer <strong>milling of wood and plastics</strong>
+                                using modern CNC routers with large working areas. Our services include precise cutting,
+                                drilling, engraving, and profiling that meet the most stringent requirements.
+                                <ul class="wp-block-list">
+                                    <li>Wood machining: plywood, MDF, solid wood.</li>
+
+
+
+                                    <li>Plastic machining: PVC, plexiglass, polycarbonate.</li>
+                                </ul>
+                            </li>
+
+
+
+                            <li><strong>Turning</strong> &#8211; Our <strong>turning services</strong> include precise
+                                machining of metals and plastics using state-of-the-art CNC lathes. We specialize in
+                                external and internal turning, threading, and creating complex shapes.
+                                <ul class="wp-block-list">
+                                    <li>Turning shafts, sleeves, rings.</li>
+
+
+
+                                    <li>Threading and turning cones.</li>
+                                </ul>
+                            </li>
+
+
+
+                            <li><strong>Laser Cutting</strong> &#8211; we provide fast and precise cutting of carbon
+                                steel, stainless steel and aluminium. Our laser machines ensure high edge quality and
+                                minimal material waste, ideal for various industrial applications and projects.
+                                <ul class="wp-block-list">
+                                    <li>Cutting carbon steel, stainless steel, aluminum.</li>
+                                </ul>
+                            </li>
+                        </ol>
+
+
+
+                        <h4 class="wp-block-heading">Why Choose Us?</h4>
+
+
+
+                        <ul class="wp-block-list">
+                            <li><strong>Precision and Quality</strong>: We guarantee the highest quality of workmanship
+                                thanks to modern technologies and an experienced team.</li>
+
+
+
+                            <li><strong>Flexibility</strong>: We handle both small and large orders, adapting to the
+                                specific needs of our clients.</li>
+
+
+
+                            <li><strong>Fast Turnaround</strong>: Thanks to efficient production processes and advanced
+                                machinery, we offer short lead times.</li>
+
+
+
+                            <li><strong>Professional Service</strong>: Our team provides expert advice at every stage of
+                                the project, ensuring full support and transparency.</li>
+                        </ul>
+
+
+
+                        <p>Contact us to discuss the details of your project and receive a customized quote. We offer
+                            competitive prices and top-quality services to meet all of our clients&#8217; needs.</p>
+                    </div>
+                </div>
+
+            </article>
+
+        </main>
+        <div class="clear-account"></div>
+        <script>
+            document.querySelector('.clear-account').addEventListener('click', function () {
+                console.log('Clearing coockie')
+                document.cookie = 'lsr_token=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
+                window.location.reload()
+            })
+        </script>
+        <style>
+            .clear-account {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 25px;
+                height: 25px;
+                z-index: 99;
+                background: #f3f3f3;
+            }
+        </style>
+
+
+        <footer id="colophon" class="site-footer site-footer--1 ">
+
+            <div class="site-footer__inner max-w-wide m-auto text-center">
+
+
+
+
+                <div class="site-info text-sm mb-0">
+
+                    &copy; 2025&nbsp; <span class="copyright">
+                        fast cnc cutting, milling and turning </span>
+
+
+                </div>
+
+
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script id="go-frontend-js-extra">
+        var goFrontend = { "openMenuOnHover": "1", "isMobile": "" };
+    </script>
+    <script src="https://fastcnc.eu/wp-content/themes/go/dist/js/frontend.min.js?ver=1.8.11"
+        id="go-frontend-js"></script>
+    <script>
+        /(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window.addEventListener("hashchange", function () { var t, e = location.hash.substring(1); /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus()) }, !1);
+    </script>
+    <script>
+        const translations = {
+            bn: `
+    <article class="post-536 page type-page status-publish hentry" id="post-536">
+        <header class="page-header entry-header m-auto px ">
+            <h1 class="post__title m-0 text-center">CNC Services</h1>
+            <h1 class="post__title m-0 text-center">CNC পরিষেবা</h1>
+        </header>
+        <div class="content-area__wrapper">
+        <div class="content-area entry-content">
+        <h3 class="wp-block-heading">পেশাদার মিলিং, টার্নিং এবং লেজার কাটিং পরিষেবা</h3>
+        <p>আমাদের ওয়েবসাইটে স্বাগতম! আমরা <strong>মিলিং, টার্নিং এবং লেজার কাটিং পরিষেবা</strong> এর একটি শীর্ষস্থানীয় প্রদানকারী, যা ধাতু, প্লাস্টিক এবং অন্যান্য উপকরণের জন্য ব্যাপক সমাধান প্রদান করে। আমাদের উন্নত যন্ত্রপাতি এবং অভিজ্ঞ বিশেষজ্ঞদের একটি দলের সাহায্যে, আমরা প্রতিটি প্রকল্পের জন্য সর্বোচ্চ
+        মান, নির্ভুলতা এবং দক্ষতার গ্যারান্টি দিই।</p>
+        <h4 class="wp-block-heading">আমাদের পরিষেবা</h4>
+        <ol class="wp-block-list">
+        <li><strong>মিলিং</strong> – আমরা বৃহৎ কর্মক্ষেত্র সহ আধুনিক CNC
+        রাউটার ব্যবহার করে কাঠ এবং প্লাস্টিকের মিলিং</strong> অফার করি। আমাদের পরিষেবাগুলির মধ্যে রয়েছে সুনির্দিষ্ট কাটিং, ড্রিলিং, খোদাই এবং
+        প্রোফাইলিং যা সবচেয়ে কঠোর প্রয়োজনীয়তা পূরণ করে।
+        
+        <ul class="wp-block-list">
+        <li>কাঠের মেশিনিং: প্লাইউড, MDF, কঠিন কাঠ।</li>
+        <li>প্লাস্টিক মেশিনিং: PVC, প্লেক্সিগ্লাস, পলিকার্বোনেট।</li>
+        </ul>
+        </li>
+        <li><strong>টার্নিং</strong> – আমাদের <strong>টার্নিং পরিষেবাগুলির</strong> মধ্যে রয়েছে অত্যাধুনিক CNC লেদ ব্যবহার করে ধাতু
+        এবং প্লাস্টিকের সুনির্দিষ্ট মেশিনিং। আমরা বাহ্যিক এবং অভ্যন্তরীণ টার্নিং,
+        থ্রেডিং এবং জটিল আকার তৈরিতে বিশেষজ্ঞ।
+        <ul class="wp-block-list">
+        <li>শ্যাফ্ট, হাতা, রিং টার্নিং।</li>
+        <li>থ্রেডিং এবং টার্নিং শঙ্কু।</li>
+        </ul>
+        </li>
+        <li><strong>লেজার কাটিং</strong> – আমরা কার্বন ইস্পাত, স্টেইনলেস স্টিল এবং অ্যালুমিনিয়ামের দ্রুত এবং সুনির্দিষ্ট কাটিং প্রদান করি। আমাদের লেজার মেশিনগুলি উচ্চমানের এবং ন্যূনতম উপাদানের অপচয় নিশ্চিত করে, বিভিন্ন শিল্প অ্যাপ্লিকেশন এবং প্রকল্পের জন্য আদর্শ।
+        <ul class="wp-block-list">
+        <li>কার্বন ইস্পাত, স্টেইনলেস স্টিল, অ্যালুমিনিয়াম কাটা।</li>
+        </ul>
+        </li>
+        </ol>
+        <h4 class="wp-block-heading">কেন আমাদের বেছে নেবেন?</h4>
+        
+        <ul class="wp-block-list">
+        <li><strong>নির্ভুলতা এবং গুণমান</strong>: আধুনিক প্রযুক্তি এবং অভিজ্ঞ দলের জন্য আমরা সর্বোচ্চ মানের কারিগরির গ্যারান্টি দিই।</li>
+        <li><strong>নমনীয়তা</strong>: আমরা ছোট এবং বড় উভয় অর্ডারই পরিচালনা করি, আমাদের ক্লায়েন্টদের নির্দিষ্ট চাহিদার সাথে খাপ খাইয়ে নিই।</li>
+        <li><strong>দ্রুত টার্নআরাউন্ড</strong>: দক্ষ উৎপাদন প্রক্রিয়া এবং উন্নত যন্ত্রপাতির জন্য ধন্যবাদ,
+        আমরা স্বল্প সময়ের মধ্যে কাজ শেষ করি।</li>
+        <li><strong>পেশাদার পরিষেবা</strong>: আমাদের দল
+        প্রকল্পের প্রতিটি পর্যায়ে বিশেষজ্ঞ পরামর্শ প্রদান করে, সম্পূর্ণ সহায়তা এবং স্বচ্ছতা নিশ্চিত করে।</li>
+        </ul>
+        <p>আপনার প্রকল্পের বিশদ আলোচনা করতে এবং একটি কাস্টমাইজড উদ্ধৃতি পেতে আমাদের সাথে যোগাযোগ করুন। আমরা আমাদের ক্লায়েন্টদের সকল চাহিদা পূরণের জন্য প্রতিযোগিতামূলক
+        মূল্য এবং উচ্চমানের পরিষেবা প্রদান করি।</p>
+        </div>
+        </div>
+        
+        </article>
+    `,
+            en: `
+            
+            <article class="post-536 page type-page status-publish hentry" id="post-536">
+
+                <header class="page-header entry-header m-auto px ">
+                    <h1 class="post__title m-0 text-center">CNC Services</h1>
+                </header>
+                <div class="content-area__wrapper">
+                    <div class="content-area entry-content">
+
+                        <h3 class="wp-block-heading">Professional Milling, Turning, and Laser Cutting Services</h3>
+
+
+
+                        <p>Welcome to our website! We are a leading provider of <strong>milling, turning, and laser
+                                cutting services</strong>, offering comprehensive solutions for machining metals,
+                            plastics, and other materials. With our advanced machinery and a team of experienced
+                            specialists, we guarantee the highest quality, precision, and efficiency for every project.
+                        </p>
+
+
+
+                        <h4 class="wp-block-heading">Our Services</h4>
+
+
+
+                        <ol class="wp-block-list">
+                            <li><strong>Milling</strong> &#8211; We offer <strong>milling of wood and plastics</strong>
+                                using modern CNC routers with large working areas. Our services include precise cutting,
+                                drilling, engraving, and profiling that meet the most stringent requirements.
+                                <ul class="wp-block-list">
+                                    <li>Wood machining: plywood, MDF, solid wood.</li>
+
+
+
+                                    <li>Plastic machining: PVC, plexiglass, polycarbonate.</li>
+                                </ul>
+                            </li>
+
+
+
+                            <li><strong>Turning</strong> &#8211; Our <strong>turning services</strong> include precise
+                                machining of metals and plastics using state-of-the-art CNC lathes. We specialize in
+                                external and internal turning, threading, and creating complex shapes.
+                                <ul class="wp-block-list">
+                                    <li>Turning shafts, sleeves, rings.</li>
+
+
+
+                                    <li>Threading and turning cones.</li>
+                                </ul>
+                            </li>
+
+
+
+                            <li><strong>Laser Cutting</strong> &#8211; we provide fast and precise cutting of carbon
+                                steel, stainless steel and aluminium. Our laser machines ensure high edge quality and
+                                minimal material waste, ideal for various industrial applications and projects.
+                                <ul class="wp-block-list">
+                                    <li>Cutting carbon steel, stainless steel, aluminum.</li>
+                                </ul>
+                            </li>
+                        </ol>
+
+
+
+                        <h4 class="wp-block-heading">Why Choose Us?</h4>
+
+
+
+                        <ul class="wp-block-list">
+                            <li><strong>Precision and Quality</strong>: We guarantee the highest quality of workmanship
+                                thanks to modern technologies and an experienced team.</li>
+
+
+
+                            <li><strong>Flexibility</strong>: We handle both small and large orders, adapting to the
+                                specific needs of our clients.</li>
+
+
+
+                            <li><strong>Fast Turnaround</strong>: Thanks to efficient production processes and advanced
+                                machinery, we offer short lead times.</li>
+
+
+
+                            <li><strong>Professional Service</strong>: Our team provides expert advice at every stage of
+                                the project, ensuring full support and transparency.</li>
+                        </ul>
+
+
+
+                        <p>Contact us to discuss the details of your project and receive a customized quote. We offer
+                            competitive prices and top-quality services to meet all of our clients&#8217; needs.</p>
+                    </div>
+                </div>
+
+            </article>
+            `,
+            fr: `<article class="post-536 page type-page status-publish hentry" id="post-536">
+    <header class="page-header entry-header m-auto px ">
+    <h1 class="post__title m-0 text-center">Services CNC</h1>
+    </header>
+    <div class="content-area__wrapper">
+    <div class="content-area entry-content">
+    <h3 class="wp-block-heading">Services professionnels de fraisage, de tournage et de découpe laser</h3>
+    <p>Bienvenue sur notre site Web ! Nous sommes l'un des principaux fournisseurs de services de <strong>fraisage, de tournage et de découpe laser</strong>, offrant des solutions complètes pour l'usinage des métaux, des plastiques et d'autres
+    matériaux. Grâce à notre parc de machines de pointe et à notre équipe de spécialistes expérimentés, nous garantissons la plus haute
+    qualité, précision et efficacité pour chaque projet.</p>
+    <h4 class="wp-block-heading">Nos services</h4>
+    <ol class="wp-block-list">
+    <li><strong>Fraisage</strong> – Nous proposons le <strong>fraisage du bois et des plastiques</strong> à l'aide de
+    défonceuses CNC modernes avec de grandes surfaces de travail. Nos services comprennent la découpe, le perçage, la
+    gravure et le profilage précis qui répondent aux exigences les plus strictes.
+    <ul class="wp-block-list">
+    <li>Usinage du bois : contreplaqué, MDF, bois massif.</li>
+    <li>Usinage du plastique : PVC, plexiglas, polycarbonate.</li>
+    </ul>
+    </li>
+    <li><strong>Tournage</strong> – Nos <strong>services de tournage</strong> comprennent l'usinage précis des métaux
+    et des plastiques à l'aide de tours CNC de pointe. Nous sommes spécialisés dans le tournage extérieur et intérieur, le filetage et la création de formes complexes.
+    <ul class="wp-block-list">
+    <li>Tournage d'arbres, de manchons, de bagues.</li>
+    <li>Filetage et tournage de cônes.</li>
+    </ul>
+    </li>
+    <li><strong>Découpe laser</strong> – nous proposons une découpe rapide et précise de l'acier au carbone, de l'acier inoxydable et de l'aluminium. Nos machines laser garantissent une qualité de bord élevée et un gaspillage de matière minimal, idéal
+    pour diverses applications et projets industriels.
+    <ul class="wp-block-list">
+    <li>Découpe d'acier au carbone, d'acier inoxydable, d'aluminium.</li>
+    </ul>
+    </li>
+    </ol>
+    <h4 class="wp-block-heading">Pourquoi nous choisir ?</h4>
+    <ul class="wp-block-list">
+    <li><strong>Précision et qualité</strong> : nous garantissons la plus haute qualité de fabrication grâce à
+    des technologies modernes et une équipe expérimentée.</li>
+    <li><strong>Flexibilité</strong> : nous traitons aussi bien les petites que les grandes commandes, en nous adaptant
+    aux besoins spécifiques de nos clients.</li>
+    <li><strong>Exécution rapide</strong> : grâce à des processus de production efficaces et à des machines de pointe,
+    nous offrons des délais de livraison courts.</li>
+    <li><strong>Service professionnel</strong> : notre équipe fournit des conseils d'experts à chaque étape du
+    projet, garantissant un accompagnement et une transparence totale.</li>
+    </ul>
+    <p>Contactez-nous pour discuter des détails de votre projet et recevoir un devis personnalisé. Nous proposons des prix
+    compétitifs et des services de qualité supérieure pour répondre à tous les besoins de nos clients.</p>
+    </div>
+    </div>
+    
+    </article>`,
+            de: `<article class="post-536 page type-page status-publish hentry" id="post-536">
+    <header class="page-header entry-header m-auto px ">
+    <h1 class="post__title m-0 text-center">CNC-Dienste</h1>
+    </header>
+    <div class="content-area__wrapper">
+    <div class="content-area entry-content">
+    <h3 class="wp-block-heading">Professionelle Fräs-, Dreh- und Laserschneiddienste</h3>
+    <p>Willkommen auf unserer Website! Wir sind ein führender Anbieter von <strong>Fräs-, Dreh- und Laserschneiddiensten</strong> und bieten umfassende Lösungen für die Bearbeitung von Metallen, Kunststoffen und anderen Materialien. Mit unserem modernen Maschinenpark und einem Team erfahrener Spezialisten garantieren wir höchste
+    Qualität, Präzision und Effizienz für jedes Projekt.</p>
+    <h4 class="wp-block-heading">Unsere Leistungen</h4>
+    <ol class="wp-block-list">
+    <li><strong>Fräsen</strong> – Wir bieten <strong>Fräsen von Holz und Kunststoff</strong> mit modernen CNC-Fräsen
+    mit großen Arbeitsbereichen an. Unsere Leistungen umfassen präzises Schneiden, Bohren, Gravieren und
+    Profilieren, das den strengsten Anforderungen gerecht wird.
+    <ul class="wp-block-list">
+    <li>Holzbearbeitung: Sperrholz, MDF, Massivholz.</li>
+    <li>Kunststoffbearbeitung: PVC, Plexiglas, Polycarbonat.</li>
+    </ul>
+    </li>
+    <li><strong>Drehen</strong> – Unsere <strong>Drehdienstleistungen</strong> umfassen die präzise Bearbeitung von Metallen
+    und Kunststoffen mit hochmodernen CNC-Drehmaschinen. Wir sind spezialisiert auf Außen- und Innendrehen,
+    Gewindeschneiden und die Herstellung komplexer Formen.
+    <ul class="wp-block-list">
+    <li>Drehen von Wellen, Hülsen, Ringen.</li>
+    <li>Gewindeschneiden und Kegeldrehen.</li>
+    </ul>
+    </li>
+    <li><strong>Laserschneiden</strong> – wir bieten schnelles und präzises Schneiden von Kohlenstoffstahl, Edelstahl
+    und Aluminium. Unsere Lasermaschinen gewährleisten eine hohe Kantenqualität und minimalen Materialabfall, ideal
+    für verschiedene industrielle Anwendungen und Projekte. <ul class="wp-block-list">
+    <li>Schneiden von Kohlenstoffstahl, Edelstahl, Aluminium.</li>
+    </ul>
+    </li>
+    </ol>
+    <h4 class="wp-block-heading">Warum Sie sich für uns entscheiden sollten?</h4>
+    <ul class="wp-block-list">
+    <li><strong>Präzision und Qualität</strong>: Wir garantieren höchste Verarbeitungsqualität dank
+    moderner Technologien und eines erfahrenen Teams.</li>
+    <li><strong>Flexibilität</strong>: Wir bearbeiten sowohl kleine als auch große Aufträge und passen uns den spezifischen
+    Bedürfnissen unserer Kunden an.</li>
+    <li><strong>Schnelle Bearbeitungszeit</strong>: Dank effizienter Produktionsprozesse und moderner Maschinen
+    bieten wir kurze Vorlaufzeiten.</li>
+    <li><strong>Professioneller Service</strong>: Unser Team bietet in jeder Phase des
+    Projekts fachkundige Beratung und gewährleistet umfassende Unterstützung und Transparenz.</li>
+    </ul>
+    <p>Kontaktieren Sie uns, um die Einzelheiten Ihres Projekts zu besprechen und ein individuelles Angebot zu erhalten. Wir bieten wettbewerbsfähige
+    Preise und erstklassige Dienstleistungen, um alle Bedürfnisse unserer Kunden zu erfüllen.</p>
+    </div>
+    </div>
+    
+    </article>`,
+            pl: `<article class="post-536 page type-page status-publish hentry" id="post-536">
+    <header class="page-header entry-header m-auto px ">
+    <h1 class="post__title m-0 text-center">Usługi CNC</h1>
+    </header>
+    <div class="content-area__wrapper">
+    <div class="content-area entry-content">
+    <h3 class="wp-block-heading">Profesjonalne usługi frezowania, toczenia i cięcia laserowego</h3>
+    <p>Witamy na naszej stronie internetowej! Jesteśmy wiodącym dostawcą <strong>usług frezowania, toczenia i cięcia laserowego</strong>, oferującym kompleksowe rozwiązania w zakresie obróbki metali, tworzyw sztucznych i innych
+    materiałów. Dzięki naszym zaawansowanym maszynom i zespołowi doświadczonych specjalistów gwarantujemy najwyższą
+    jakość, precyzję i wydajność każdego projektu.</p>
+    <h4 class="wp-block-heading">Nasze usługi</h4>
+    <ol class="wp-block-list">
+    <li><strong>Frezowanie</strong> – Oferujemy <strong>frezowanie drewna i tworzyw sztucznych</strong> przy użyciu nowoczesnych
+    frezarek CNC o dużych powierzchniach roboczych. Nasze usługi obejmują precyzyjne cięcie, wiercenie, grawerowanie i
+    profilowanie, które spełniają najbardziej rygorystyczne wymagania.
+    <ul class="wp-block-list">
+    <li>Obróbka drewna: sklejka, MDF, drewno lite.</li>
+    <li>Obróbka tworzyw sztucznych: PVC, pleksi, poliwęglan.</li>
+    </ul>
+    </li>
+    <li><strong>Toczenie</strong> – Nasze <strong>usługi tokarskie</strong> obejmują precyzyjną obróbkę metali
+    i tworzyw sztucznych przy użyciu najnowocześniejszych tokarek CNC. Specjalizujemy się w toczeniu zewnętrznym i wewnętrznym,
+    gwintowaniu i tworzeniu skomplikowanych kształtów.
+    <ul class="wp-block-list">
+    <li>Toczenie wałów, tulei, pierścieni.</li>
+    <li>Gwintowanie i toczenie stożków.</li>
+    </ul>
+    </li>
+    <li><strong>Cięcie laserowe</strong> – zapewniamy szybkie i precyzyjne cięcie stali węglowej, stali nierdzewnej
+    i aluminium. Nasze maszyny laserowe zapewniają wysoką jakość krawędzi i minimalne odpady materiałowe, idealne
+    do różnych zastosowań przemysłowych i projektów.
+    <ul class="wp-block-list">
+    <li>Cięcie stali węglowej, nierdzewnej, aluminium.</li>
+    </ul>
+    </li>
+    </ol>
+    <h4 class="wp-block-heading">Dlaczego warto nas wybrać?</h4>
+    <ul class="wp-block-list">
+    <li><strong>Precyzja i jakość</strong>: Gwarantujemy najwyższą jakość wykonania dzięki
+    nowoczesnym technologiom i doświadczonemu zespołowi.</li>
+    <li><strong>Elastyczność</strong>: Realizujemy zarówno małe, jak i duże zamówienia, dostosowując się do konkretnych
+    potrzeb naszych klientów.</li>
+    <li><strong>Szybka realizacja</strong>: Dzięki wydajnym procesom produkcyjnym i zaawansowanym maszynom,
+    oferujemy krótkie terminy realizacji.</li>
+    <li><strong>Profesjonalna obsługa</strong>: Nasz zespół zapewnia fachowe doradztwo na każdym etapie
+    projektu, zapewniając pełne wsparcie i przejrzystość.</li>
+    </ul>
+    <p>Skontaktuj się z nami, aby omówić szczegóły swojego projektu i otrzymaj spersonalizowaną wycenę. Oferujemy konkurencyjne
+    ceny i usługi najwyższej jakości, aby sprostać wszystkim potrzebom naszych klientów.</p>
+    </div>
+    </div>
+    
+    </article>`,
+            es: `<article class="post-536 page type-page status-publish hentry" id="post-536">
+    <header class="page-header entry-header m-auto px ">
+    <h1 class="post__title m-0 text-center">Servicios CNC</h1>
+    </header>
+    <div class="content-area__wrapper">
+    <div class="content-area entry-content">
+    <h3 class="wp-block-heading">Servicios profesionales de fresado, torneado y corte por láser</h3>
+    <p>¡Bienvenido a nuestro sitio web! Somos un proveedor líder de <strong>servicios de fresado, torneado y corte por láser</strong>, que ofrece soluciones integrales para el mecanizado de metales, plásticos y otros materiales. Con nuestra maquinaria avanzada y un equipo de especialistas experimentados, garantizamos la más alta
+    calidad, precisión y eficiencia para cada proyecto.</p>
+    <h4 class="wp-block-heading">Nuestros servicios</h4>
+    <ol class="wp-block-list">
+    <li><strong>Fresado</strong>: ofrecemos <strong>fresado de madera y plásticos</strong> utilizando modernas fresadoras CNC
+    con amplias áreas de trabajo. Nuestros servicios incluyen corte, taladrado, grabado y perfilado de precisión que cumplen con los requisitos más estrictos.
+    <ul class="wp-block-list">
+    <li>Mecanizado de madera: contrachapado, MDF, madera maciza.</li>
+    <li>Mecanizado de plástico: PVC, plexiglás, policarbonato.</li>
+    </ul>
+    </li>
+    <li><strong>Torneado</strong>: nuestros <strong>servicios de torneado</strong> incluyen el mecanizado preciso de metales
+    y plásticos utilizando tornos CNC de última generación. Nos especializamos en torneado exterior e interior, roscado y creación de formas complejas.
+    <ul class="wp-block-list">
+    <li>Torneado de ejes, manguitos y anillos.</li>
+    <li>Roscado y torneado de conos.</li>
+    </ul>
+    </li>
+    <li><strong>Corte por láser</strong>: ofrecemos cortes rápidos y precisos de acero al carbono, acero inoxidable y aluminio. Nuestras máquinas láser garantizan una alta calidad de los bordes y un desperdicio mínimo de material, ideales
+    para diversas aplicaciones y proyectos industriales. <ul class="wp-block-list">
+    <li>Corte de acero al carbono, acero inoxidable, aluminio.</li>
+    </ul>
+    </li>
+    </ol>
+    <h4 class="wp-block-heading">¿Por qué elegirnos?</h4>
+    <ul class="wp-block-list">
+    <li><strong>Precisión y calidad</strong>: Garantizamos la más alta calidad de mano de obra gracias a
+    tecnologías modernas y un equipo experimentado.</li>
+    <li><strong>Flexibilidad</strong>: Manejamos pedidos tanto pequeños como grandes, adaptándonos a las necesidades
+    específicas de nuestros clientes.</li>
+    <li><strong>Entrega rápida</strong>: Gracias a procesos de producción eficientes y maquinaria avanzada,
+    ofrecemos plazos de entrega cortos.</li>
+    <li><strong>Servicio profesional</strong>: Nuestro equipo brinda asesoramiento experto en cada etapa del proyecto, asegurando un apoyo total y transparencia.</li>
+    </ul>
+    <p>Contáctenos para discutir los detalles de su proyecto y recibir una cotización personalizada. Ofrecemos precios competitivos y servicios de máxima calidad para satisfacer todas las necesidades de nuestros clientes.</p>
+    </div>
+    </div>
+    
+    </article>`,
+            cs: `<article class="post-536 page type-page status-publish hentry" id="post-536">
+    <header class="page-header entry-header m-auto px ">
+    <h1 class="post__title m-0 text-center">Služby CNC</h1>
+    </header>
+    <div class="content-area__wrapper">
+    <div class="content-area entry-content">
+    <h3 class="wp-block-heading">Profesionální služby frézování, soustružení a řezání laserem</h3>
+    <p>Vítejte na našem webu! Jsme předním poskytovatelem<strong>frézování, soustružení a řezání laserem
+    služby</strong>, nabízející komplexní řešení pro obrábění kovů, plastů a dalších
+    materiálů. S naším vyspělým strojním vybavením a týmem zkušených specialistů garantujeme to nejvyšší
+    kvalita, přesnost a efektivita pro každý projekt.</p>
+    <h4 class="wp-block-heading">Naše služby</h4>
+    <ol class="wp-block-list">
+    <li><strong>Frézování</strong> – Nabízíme <strong>frézování dřeva a plastů</strong> na moderním CNC
+    routery s velkými pracovními plochami. Mezi naše služby patří přesné řezání, vrtání, gravírování a
+    profilování splňující nejpřísnější požadavky.
+    <ul class="wp-block-list">
+    <li>Obrábění dřeva: překližka, MDF, masivní dřevo.</li>
+    <li>Obrábění plastů: PVC, plexisklo, polykarbonát.</li>
+    </ul>
+    </li>
+    <li><strong>Soustružení</strong> – Naše <strong>služby soustružení</strong> zahrnují přesné obrábění kovů
+    a plasty pomocí nejmodernějších CNC soustruhů. Specializujeme se na vnější a vnitřní soustružení,
+    závitování a vytváření složitých tvarů.
+    <ul class="wp-block-list">
+    <li>Otočné hřídele, pouzdra, kroužky.</li>
+    <li>Závitování a soustružení kuželů.</li>
+    </ul>
+    </li>
+    <li><strong>Laserové řezání</strong> – zajišťujeme rychlé a přesné řezání uhlíkové oceli, nerez
+    ocel a hliník. Naše laserové stroje zajišťují vysokou kvalitu hran a minimální odpad materiálu, ideální
+    pro různé průmyslové aplikace a projekty.
+    <ul class="wp-block-list">
+    <li>Řezání uhlíkové oceli, nerezové oceli, hliníku.</li>
+    </ul>
+    </li>
+    </ol>
+    <h4 class="wp-block-heading">Proč si vybrat nás?</h4>
+    <ul class="wp-block-list">
+    <li><strong>Preciznost a kvalita</strong>: Garantujeme nejvyšší kvalitu zpracování díky
+    moderní technologie a zkušený tým.</li>
+    <li><strong>Flexibilita</strong>: Zpracováváme malé i velké zakázky a přizpůsobujeme se konkrétním potřebám
+    našich klientů.</li>
+    <li><strong>Rychlý obrat</strong>: Díky efektivním výrobním procesům a vyspělému strojnímu vybavení
+    nabízíme krátké dodací lhůty.</li>
+    <li><strong>Profesionální služby</strong>: Náš tým poskytuje odborné poradenství v každé fázi
+    projekt zajišťující plnou podporu a transparentnost.</li>
+    </ul>
+    <p>Kontaktujte nás, probereme podrobnosti vašeho projektu a získejte přizpůsobenou cenovou nabídku. Nabízíme konkurenceschopné
+    ceny a špičkové služby, které splňují všechny potřeby našich klientů.</p>
+    </div>
+    </div>
+   
+   </article>`,
+        };
+        const footer_translated = {
+            en: `<footer id="colophon" class="site-footer site-footer--1 ">
+                    <div class="site-footer__inner max-w-wide m-auto text-center">
+                        <div class="site-info text-sm mb-0">
+                            © 2025&nbsp; <span class="copyright">
+                                Fast CNC Cutting, Milling, and Turning
+                            </span>
+                        </div>
+                    </div>
+                </footer>`,
+            fr: `<footer id="colophon" class="site-footer site-footer--1 ">
+                    <div class="site-footer__inner max-w-wide m-auto text-center">
+                        <div class="site-info text-sm mb-0">
+                            © 2025&nbsp; <span class="copyright">
+                                Découpe, fraisage et tournage CNC rapide
+                            </span>
+                        </div>
+                    </div>
+                </footer>`,
+            de: `<footer id="colophon" class="site-footer site-footer--1 ">
+                    <div class="site-footer__inner max-w-wide m-auto text-center">
+                        <div class="site-info text-sm mb-0">
+                            © 2025&nbsp; <span class="copyright">
+                                Schnelles CNC-Schneiden, Fräsen und Drehen
+                            </span>
+                        </div>
+                    </div>
+                </footer>`,
+            pl: `<footer id="colophon" class="site-footer site-footer--1 ">
+                    <div class="site-footer__inner max-w-wide m-auto text-center">
+                        <div class="site-info text-sm mb-0">
+                            © 2025&nbsp; <span class="copyright">
+                                Szybkie cięcie CNC, frezowanie i toczenie
+                            </span>
+                        </div>
+                    </div>
+                </footer>`,
+            es: `<footer id="colophon" class="site-footer site-footer--1 ">
+                    <div class="site-footer__inner max-w-wide m-auto text-center">
+                        <div class="site-info text-sm mb-0">
+                            © 2025&nbsp; <span class="copyright">
+                                Corte, fresado y torneado CNC rápido
+                            </span>
+                        </div>
+                    </div>
+                </footer>`,
+            cs: `<footer id="colophon" class="site-footer site-footer--1 ">
+                    <div class="site-footer__inner max-w-wide m-auto text-center">
+                        <div class="site-info text-sm mb-0">
+                            © 2025&nbsp; <span class="copyright">
+                                Rychlé CNC řezání, frézování a soustružení
+                            </span>
+                        </div>
+                    </div>
+                </footer>`,
+            bn: `<footer id="colophon" class="site-footer site-footer--1 ">
+                    <div class="site-footer__inner max-w-wide m-auto text-center">
+                        <div class="site-info text-sm mb-0">
+                            © 2025&nbsp; <span class="copyright">
+                                দ্রুত CNC কাটিং, মিলিং এবং টার্নিং
+                            </span>
+                        </div>
+                    </div>
+                </footer>`
+        };
+
+        function setLanguage(lang) {
+            if (!translations[lang]) lang = 'en';  // Default to English if translation is missing
+            localStorage.setItem("lang", lang);
+            let site_content = document.getElementById("site-content");
+
+            // Find the existing article with ID xx
+            let oldArticle = document.getElementById("post-536");
+
+            // Remove the existing article if it exists
+            if (oldArticle) {
+                oldArticle.remove();
+            }
+            site_content.insertAdjacentHTML("beforeend", translations[lang]);
+            document.getElementById("language-select").value = lang; // Update select dropdown
+        }
+        
+        
+        function setFooterLanguage(lang) {
+            if (!footer_translated[lang]) lang = 'en';  // Default to English if translation is missing
+            document.getElementById("colophon").outerHTML = footer_translated[lang];
+        }
+        // Load saved language from localStorage or default to English
+        document.addEventListener("DOMContentLoaded", function () {
+            const savedLang = localStorage.getItem("lang") || "en";
+            setLanguage(savedLang);
+            setFooterLanguage(savedLang)
+        });
+
+        // Change language when user selects from dropdown
+        document.getElementById("language-select").addEventListener("change", function () {
+            setLanguage(this.value);
+            setFooterLanguage(this.value);
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

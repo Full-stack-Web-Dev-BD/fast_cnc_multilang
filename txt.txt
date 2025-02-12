@@ -1,0 +1,7 @@
+English → en
+French → fr
+German → de
+Polish → pl
+Spanish → es
+Czech → cs
+Bangla (Bengali) → bn
