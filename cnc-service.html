@@ -49,6 +49,19 @@
             text-decoration: none
         }
     </style>
+    <style>
+        .lang_selector{
+            padding: 0px !important;
+            margin: 0;
+            margin-right: 40px;
+            text-align: center;
+            border: 0;
+            border-bottom: 2px solid;
+            width: 100px;
+            position: relative;
+            bottom: 4px;        
+        }
+    </style>
     <style id='global-styles-inline-css'>
         :root {
             --wp--preset--aspect-ratio--square: 1;
@@ -553,23 +566,23 @@
                     </div>
                     <nav id="header__navigation" class="header__navigation" aria-label="Poziomo" role="navigation"
                         itemscope itemtype="http://schema.org/SiteNavigationElement">
+                        
+                        <select class="lang_selector " id="language-select">
+                            <option value="en">English</option>
+                            <option value="fr">Français</option>
+                            <option value="de">Deutsch</option>
+                            <option value="pl">Polski</option>
+                            <option value="es">Español</option>
+                            <option value="cs">Čeština</option>
+                            <option value="bn">বাংলা</option>
+                        </select>
 
                         <div class="header__navigation-inner">
                             <div class="menu-main-menu-container">
 
 
-
                                 <ul id="menu-main-menu" class="primary-menu list-reset">
-                                    <select style="padding: 0px 10px !important;margin-left: 40px;"
-                                        class="__currency_selector menu-item" id="language-select">
-                                        <option value="en">English</option>
-                                        <option value="fr">Français</option>
-                                        <option value="de">Deutsch</option>
-                                        <option value="pl">Polski</option>
-                                        <option value="es">Español</option>
-                                        <option value="cs">Čeština</option>
-                                        <option value="bn">বাংলা</option>
-                                    </select>
+
                                     <li id="menu-item-484"
                                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-484"><a
                                             href="/">Instant Quote</a></li>
@@ -649,37 +662,38 @@
             <script>
                 window.addEventListener("load", function () {
                     let headerContainer = document.getElementById("menu-main-menu");
-                    if (headerContainer) {
+            
+                    // Check if the currency selector already exists
+                    if (!document.getElementById("__currency") && headerContainer) {
                         let currencyDiv = document.createElement("div");
                         currencyDiv.className = "__currency_selector menu-item";
                         currencyDiv.innerHTML = `
-                <select style="padding: 0px 10px !important;" id="__currency">
-                    <option value="EUR">EUR (Euro)</option>
-                    <option value="PLN">PLN (Polish Zloty)</option>
-                    <option value="CZK">CZK (Czech Koruna)</option>
-                    <option value="HUF">HUF (Hungarian Forint)</option>
-                    <option value="SEK">SEK (Swedish Krona)</option>
-                    <option value="DKK">DKK (Danish Krone)</option>
-                </select>
-            `;
+                            <select style="padding: 0px 10px !important;" id="__currency">
+                                <option value="EUR">EUR (Euro)</option>
+                                <option value="PLN">PLN (Polish Zloty)</option>
+                                <option value="CZK">CZK (Czech Koruna)</option>
+                                <option value="HUF">HUF (Hungarian Forint)</option>
+                                <option value="SEK">SEK (Swedish Krona)</option>
+                                <option value="DKK">DKK (Danish Krone)</option>
+                            </select>
+                        `;
                         headerContainer.prepend(currencyDiv);
                     }
-
+            
                     let currencySelector = document.getElementById("__currency");
-
-                    // Ensure localStorage is set and applies the correct currency
-                    let savedCurrency = localStorage.getItem("selectedCurrency")
-                    if (!savedCurrency) {
-                        savedCurrency = "EUR";
-                        localStorage.setItem("selectedCurrency", savedCurrency);
+            
+                    if (currencySelector) {
+                        // Ensure localStorage is set and applies the correct currency
+                        let savedCurrency = localStorage.getItem("selectedCurrency") || "EUR";
+                        currencySelector.value = savedCurrency;
+            
+                        currencySelector.addEventListener("change", function () {
+                            localStorage.setItem("selectedCurrency", this.value);
+                        });
                     }
-                    currencySelector.value = savedCurrency;
-
-                    currencySelector.addEventListener("change", function () {
-                        localStorage.setItem("selectedCurrency", this.value);
-                    });
                 });
             </script>
+            
 
             <!-- script for lang detect and manage  -->
 
@@ -845,7 +859,6 @@
             </div>
 
         </footer>
-
     </div>
 
     <script id="go-frontend-js-extra">
@@ -1331,6 +1344,190 @@
                     </div>
                 </footer>`
         };
+        const header_translated = {
+            en: `<ul id="menu-main-menu" class="primary-menu list-reset"> 
+                    <div class="__currency_selector menu-item">
+                        <select style="padding: 0px 10px !important;" id="__currency">
+                            <option value="EUR">EUR (Euro)</option>
+                            <option value="PLN">PLN (Polish Zloty)</option>
+                            <option value="CZK">CZK (Czech Koruna)</option>
+                            <option value="HUF">HUF (Hungarian Forint)</option>
+                            <option value="SEK">SEK (Swedish Krona)</option>
+                            <option value="DKK">DKK (Danish Krone)</option>
+                        </select>
+                    </div>
+                    <li id="menu-item-484" class="menu-item"><a href="/">Instant Quote</a></li>
+                    <li id="menu-item-538" class="menu-item menu-item-has-children">
+                        <a href="https://fastcnc.eu/cnc-services/" aria-haspopup="true">CNC Services</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-cutting/">Laser cutting</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-routing/">CNC routing</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-milling/">CNC Milling</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-turning/">CNC turning</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-welding/">Laser welding</a></li>
+                        </ul>
+                    </li>
+                    <li id="menu-item-577" class="menu-item">
+                        <a href="https://fastcnc.eu/cnc-portfolio/">Portfolio</a>
+                    </li>
+                </ul>`,
+            fr: `<ul id="menu-main-menu" class="primary-menu list-reset"> 
+                    <div class="__currency_selector menu-item">
+                        <select style="padding: 0px 10px !important;" id="__currency">
+                            <option value="EUR">EUR (Euro)</option>
+                            <option value="PLN">PLN (Polish Zloty)</option>
+                            <option value="CZK">CZK (Czech Koruna)</option>
+                            <option value="HUF">HUF (Hungarian Forint)</option>
+                            <option value="SEK">SEK (Swedish Krona)</option>
+                            <option value="DKK">DKK (Danish Krone)</option>
+                        </select>
+                    </div>
+                    <li class="menu-item"><a href="/">Devis instantané</a></li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="https://fastcnc.eu/cnc-services/" aria-haspopup="true">Services CNC</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-cutting/">Découpe laser</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-routing/">Fraisage CNC</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-milling/">Usinage CNC</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-turning/">Tournage CNC</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-welding/">Soudage laser</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://fastcnc.eu/cnc-portfolio/">Portfolio</a>
+                    </li>
+                </ul>`,
+            de: `<ul id="menu-main-menu" class="primary-menu list-reset"> 
+                    <div class="__currency_selector menu-item">
+                        <select style="padding: 0px 10px !important;" id="__currency">
+                            <option value="EUR">EUR (Euro)</option>
+                            <option value="PLN">PLN (Polish Zloty)</option>
+                            <option value="CZK">CZK (Czech Koruna)</option>
+                            <option value="HUF">HUF (Hungarian Forint)</option>
+                            <option value="SEK">SEK (Swedish Krona)</option>
+                            <option value="DKK">DKK (Danish Krone)</option>
+                        </select>
+                    </div>
+                    <li class="menu-item"><a href="/">Sofortiges Angebot</a></li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="https://fastcnc.eu/cnc-services/" aria-haspopup="true">CNC-Dienstleistungen</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-cutting/">Laserschneiden</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-routing/">CNC-Fräsen</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-milling/">CNC-Bearbeitung</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-turning/">CNC-Drehen</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-welding/">Laserschweißen</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://fastcnc.eu/cnc-portfolio/">Portfolio</a>
+                    </li>
+                </ul>`,
+            pl: `<ul id="menu-main-menu" class="primary-menu list-reset"> 
+                    <div class="__currency_selector menu-item">
+                        <select style="padding: 0px 10px !important;" id="__currency">
+                            <option value="EUR">EUR (Euro)</option>
+                            <option value="PLN">PLN (Polish Zloty)</option>
+                            <option value="CZK">CZK (Czech Koruna)</option>
+                            <option value="HUF">HUF (Hungarian Forint)</option>
+                            <option value="SEK">SEK (Swedish Krona)</option>
+                            <option value="DKK">DKK (Danish Krone)</option>
+                        </select>
+                    </div>
+                    <li class="menu-item"><a href="/">Natychmiastowa wycena</a></li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="https://fastcnc.eu/cnc-services/" aria-haspopup="true">Usługi CNC</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-cutting/">Cięcie laserowe</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-routing/">Frezowanie CNC</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-milling/">Obróbka CNC</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-turning/">Toczenie CNC</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-welding/">Spawanie laserowe</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://fastcnc.eu/cnc-portfolio/">Portfolio</a>
+                    </li>
+                </ul>`,
+            es: `<ul id="menu-main-menu" class="primary-menu list-reset"> 
+                    <div class="__currency_selector menu-item">
+                        <select style="padding: 0px 10px !important;" id="__currency">
+                            <option value="EUR">EUR (Euro)</option>
+                            <option value="PLN">PLN (Polish Zloty)</option>
+                            <option value="CZK">CZK (Czech Koruna)</option>
+                            <option value="HUF">HUF (Hungarian Forint)</option>
+                            <option value="SEK">SEK (Swedish Krona)</option>
+                            <option value="DKK">DKK (Danish Krone)</option>
+                        </select>
+                    </div>
+                    <li class="menu-item"><a href="/">Cotización instantánea</a></li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="https://fastcnc.eu/cnc-services/" aria-haspopup="true">Servicios CNC</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-cutting/">Corte por láser</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-routing/">Fresado CNC</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-milling/">Mecanizado CNC</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-turning/">Torneado CNC</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-welding/">Soldadura láser</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://fastcnc.eu/cnc-portfolio/">Portfolio</a>
+                    </li>
+                </ul>`,
+            cs: `<ul id="menu-main-menu" class="primary-menu list-reset"> 
+                    <div class="__currency_selector menu-item">
+                        <select style="padding: 0px 10px !important;" id="__currency">
+                            <option value="EUR">EUR (Euro)</option>
+                            <option value="PLN">PLN (Polish Zloty)</option>
+                            <option value="CZK">CZK (Czech Koruna)</option>
+                            <option value="HUF">HUF (Hungarian Forint)</option>
+                            <option value="SEK">SEK (Swedish Krona)</option>
+                            <option value="DKK">DKK (Danish Krone)</option>
+                        </select>
+                    </div>
+                    <li class="menu-item"><a href="/">Okamžitá nabídka</a></li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="https://fastcnc.eu/cnc-services/" aria-haspopup="true">Služby CNC</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-cutting/">Laserové řezání</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-routing/">CNC frézování</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-milling/">Obrábění CNC</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-turning/">Soustružení CNC</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-welding/">Laserové svařování</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://fastcnc.eu/cnc-portfolio/">Portfolio</a>
+                    </li>
+                </ul>`,
+            bn: `<ul id="menu-main-menu" class="primary-menu list-reset"> 
+                    <div class="__currency_selector menu-item">
+                        <select style="padding: 0px 10px !important;" id="__currency">
+                            <option value="EUR">EUR (Euro)</option>
+                            <option value="PLN">PLN (Polish Zloty)</option>
+                            <option value="CZK">CZK (Czech Koruna)</option>
+                            <option value="HUF">HUF (Hungarian Forint)</option>
+                            <option value="SEK">SEK (Swedish Krona)</option>
+                            <option value="DKK">DKK (Danish Krone)</option>
+                        </select>
+                    </div>
+                    <li class="menu-item"><a href="/">তাৎক্ষণিক মূল্য</a></li>
+                    <li class="menu-item menu-item-has-children">
+                        <a href="https://fastcnc.eu/cnc-services/" aria-haspopup="true">CNC পরিষেবা</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-cutting/">লেজার কাটিং</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-routing/">CNC রাউটিং</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-milling/">CNC মিলিং</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/cnc-turning/">CNC টার্নিং</a></li>
+                            <li class="menu-item"><a href="https://fastcnc.eu/laser-welding/">লেজার ওয়েল্ডিং</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <a href="https://fastcnc.eu/cnc-portfolio/">পোর্টফোলিও</a>
+                    </li>
+                </ul>`
+        };
 
         function setLanguage(lang) {
             if (!translations[lang]) lang = 'en';  // Default to English if translation is missing
@@ -1347,8 +1544,11 @@
             site_content.insertAdjacentHTML("beforeend", translations[lang]);
             document.getElementById("language-select").value = lang; // Update select dropdown
         }
-        
-        
+
+        function setHeaderrLanguage(lang) {
+            if (!header_translated[lang]) lang = 'en';  // Default to English if translation is missing
+            document.getElementById("menu-main-menu").outerHTML = header_translated[lang];
+        }
         function setFooterLanguage(lang) {
             if (!footer_translated[lang]) lang = 'en';  // Default to English if translation is missing
             document.getElementById("colophon").outerHTML = footer_translated[lang];
@@ -1358,12 +1558,16 @@
             const savedLang = localStorage.getItem("lang") || "en";
             setLanguage(savedLang);
             setFooterLanguage(savedLang)
+            setHeaderrLanguage(savedLang)
+
         });
 
         // Change language when user selects from dropdown
         document.getElementById("language-select").addEventListener("change", function () {
             setLanguage(this.value);
             setFooterLanguage(this.value);
+            setHeaderrLanguage(this.value);
+
         });
 
 
